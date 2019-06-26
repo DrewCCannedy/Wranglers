@@ -29,4 +29,4 @@ Anyone interacting with Unity please follow the below conventions
     - As an example, a Sheriff Object folder named sheriff
     - In the sheriff folder is everything related to the sheriff object
     - His prefab, texture, scripts, sounds, etc...
-    - If there is a space in the name of something, use a dash ie: sheriff-butt-texture
+    - If there is a space in the name of something, use camelCase ie: SheriffButtTexture
