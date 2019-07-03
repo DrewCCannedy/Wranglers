@@ -25,8 +25,4 @@ Anyone interacting with Unity please follow the below conventions
     - Remove it from the scene
     - You can make parent objects prefabs too
     - Tell me you added the prefab and I will place it into the scene
-4. Folders are based around objects if possible
-    - As an example, a Sheriff Object folder named sheriff
-    - In the sheriff folder is everything related to the sheriff object
-    - His prefab, texture, scripts, sounds, etc...
-    - If there is a space in the name of something, use camelCase ie: SheriffButtTexture
+4. Use CamelCase
