@@ -7,8 +7,9 @@ public class DialogueManager : MonoBehaviour
 {
 
     public Text nameText;
+    public Text targetNameText;
+    public Text targetSideNameText;
     public Text dialogueText;
-
     public Animator animator;
 
     private Queue<string> sentences;
@@ -22,14 +23,18 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(Dialogue dialogue)
     {
         animator.SetBool("isOpen", true);
+        if (dialogue.doubleConvo)
+            animator.SetBool("isDouble", true);
+        nameText.text = dialogue.character;
+        targetNameText.text = dialogue.targetCharacter;
+        targetSideNameText.text = dialogue.character;
 
-        nameText.text = dialogue.name;
 
         sentences.Clear();
 
-        foreach (string sentence in dialogue.sentences)
+        foreach (Speech sentence in dialogue.sentences)
         {
-            sentences.Enqueue(sentence);
+            sentences.Enqueue(sentence.text);
         }
 
         DisplayNextSentence();
@@ -61,6 +66,7 @@ public class DialogueManager : MonoBehaviour
     void EndDialogue()
     {
         animator.SetBool("isOpen", false);
+        animator.SetBool("isDouble", false);
     }
 
 }

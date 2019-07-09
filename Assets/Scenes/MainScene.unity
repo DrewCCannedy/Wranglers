@@ -508,6 +508,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 977350261}
+  targetNameText: {fileID: 1698990587}
+  targetSideNameText: {fileID: 946394603}
   dialogueText: {fileID: 251750004}
   animator: {fileID: 1818305156}
 --- !u!1 &602228841
@@ -1240,11 +1242,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Jim
+    character: Jim
+    targetCharacter: Butch
+    targetSideCharacter: Cook
     sentences:
-    - I'm Jim I'm the sheriff around these parts.
-    - Yeehaw cowboy.
-    doubConvo: 0
+    - speaker: 0
+      text: Hey pardner it's me Jim the town Sheriff
+    - speaker: 2
+      text: How you doin partner
+    - speaker: 0
+      text: Good day to you then
+    doubleConvo: 0
 --- !u!114 &1221266218
 MonoBehaviour:
   m_ObjectHideFlags: 0
